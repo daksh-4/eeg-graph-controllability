@@ -6,9 +6,9 @@ cfg.conds   = {'rsEC', 'rsEO'};
 cfg.bands   = {'theta', 'alpha', 'beta'};
 cfg.variant = 'all';                               % all, h1 or h2 (odd / even epochs)
 
-cfg.data_dir = fullfile(getenv('HOME'), 'caesar_derivatives', 'pass_b', 'matlab_export');
+cfg.data_dir = fullfile(getenv('HOME'), 'caesar_derivatives', 'pass_b', 'matlab_native');
 
-% regions (same channel lists as the Python analysis)
+% regions 
 cfg.frontal   = {'Fp1', 'Fp2', 'F3', 'F4', 'F7', 'F8', 'Fz'};
 cfg.posterior = {'P3', 'P4', 'Pz', 'O1', 'O2'};
 

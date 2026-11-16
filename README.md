@@ -1,9 +1,10 @@
-# EEG graph network analysis (MATLAB)
+# EEG connectivity and graph network analysis
 
-Graph measures and controllability on resting EEG connectivity matrices (wPLI or coherence), one row per child per condition and band.
+Connectivity (wPLI, coherence) and graph measures including controllability on resting EEG, one row per child per condition and band.
 
-- `graph_networks.m` runs everything. Settings are in `scripts/matlab/graph_config.m`.
-- Needs the [Brain Connectivity Toolbox](https://sites.google.com/site/bctnet/); put it in a `BCT/` folder next to `graph_networks.m`.
-- Input: one `.mat` file per measure and condition (`wpli_rsEC.mat`, ...) containing `W_<variant>_<band>` (19 x 19 x N), `ids`, `channels` and `keep`.
-- Output: `graph_networks_outputs_all.csv`.
+- `scripts/run_connectivity.m` computes the connectivity matrices from the cleaned epochs (needs [FieldTrip](https://www.fieldtriptoolbox.org/) to read them).
+- `scripts/graph_networks.m` computes the graph measures from those matrices (needs the [Brain Connectivity Toolbox](https://sites.google.com/site/bctnet/) in a `BCT/` folder at the repository root).
+- Settings are in `scripts/config/`; helper functions are in `scripts/epochs/`, `scripts/connectivity/` and `scripts/graph/`.
 - Controllability follows Gu et al. 2015 and Chari et al. 2022.
+
+No data are included.

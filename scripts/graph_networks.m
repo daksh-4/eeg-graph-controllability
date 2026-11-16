@@ -1,8 +1,8 @@
 % graph network analysis, all conditions and bands
 
 here = fileparts(mfilename('fullpath'));
-addpath(genpath(fullfile(here, 'BCT')));
-addpath(fullfile(here, 'scripts', 'matlab'));
+addpath(genpath(here));
+addpath(genpath(fullfile(here, '..', 'BCT')));
 
 cfg = graph_config();
 
